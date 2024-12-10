@@ -9,3 +9,7 @@ version = "0.1.0"
 [tasks]
 
 [dependencies]
+gcc = ">=14.2.0,<14.3"
+gxx = ">=14.2.0,<14.3"
+cmake = ">=3.31.2,<4"
+ninja = ">=1.12.1,<2"
