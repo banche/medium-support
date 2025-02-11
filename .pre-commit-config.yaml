@@ -1,0 +1,9 @@
+repos:
+  - repo: local
+    hooks: 
+      - id: check-yaml
+        name: check yaml syntax
+        description: checks yaml files for parseable syntax
+        entry: check-yaml -m
+        language: python
+        types: [yaml]
