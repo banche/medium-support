@@ -9,6 +9,12 @@ repos:
         entry: check-yaml -m
         language: python
         types: [yaml]
+      - id: check-json
+        name: check json syntax
+        description: checks json files for parseable syntax.
+        entry: check-json
+        language: python
+        types: [json]
       - id: check-toml
         name: check toml syntax
         description: checks toml files for parseable syntax.
