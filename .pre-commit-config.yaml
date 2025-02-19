@@ -1,9 +1,44 @@
 repos:
   - repo: local
     hooks: 
+      #----------------#
+      # Common checks
       - id: check-yaml
         name: check yaml syntax
         description: checks yaml files for parseable syntax
         entry: check-yaml -m
         language: python
         types: [yaml]
+      - id: check-toml
+        name: check toml syntax
+        description: checks toml files for parseable syntax.
+        entry: check-toml
+        language: python
+        types: [toml]
+      - id: check-added-large-files
+        name: check for added large file
+        description: prevents giant files from being committed
+        entry: check-added-large-files
+        language: python
+      - id: check-symlinks
+        name: check for broken symlinks
+        description: checks for symlinks which do not point to anything
+        entry: check-symlinks
+        language: python
+        types: [symlink]
+      - id: check-merge-conflict
+        name: check for merge conflicts
+        description: check for files that contain merge conflict strings
+        entry: check-merge-conflict
+        language: python
+        types: [text]
+      
+      #----------------#
+      # Cpp checks
+      - id: clang-format
+        name: clang-format
+        description: runs clang-format on a predefined sets of files
+        language: system
+        entry: clang-format -i
+        types_or: [c++, c, c#, cuda, proto]
+
