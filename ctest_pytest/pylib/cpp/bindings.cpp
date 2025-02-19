@@ -5,7 +5,7 @@ int add(int x, int y)
 {
     return x + y;
 }
-}
+} // namespace
 
 NB_MODULE(_pylib, m)
 {
