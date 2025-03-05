@@ -1,0 +1,3 @@
+
+entries { name: "foo" socre: 42 }
+entries { name: "bar" score: 142 }

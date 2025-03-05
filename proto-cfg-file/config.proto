@@ -1,0 +1,11 @@
+syntax = "proto3";
+package config;
+
+message Entry {
+    string name = 1;
+    int64 score = 2;
+}
+
+message Config {
+    repeated Entry entries = 1;
+}

@@ -1,0 +1,12 @@
+{
+    "entries" : [
+        {
+            "name": "foo",
+            "score": 42
+        },
+        {
+            "name": "bar",
+            "score": 142
+        }
+    ]
+}
